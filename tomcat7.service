@@ -21,14 +21,14 @@ Environment=JAVA_HOME=/opt/java/current_version
 Environment=CATALINA_BASE=/opt/tomcat/apache-tomcat-7.0.70
 Environment=CATALINA_HOME=/opt/tomcat/apache-tomcat-7.0.70
 Environment=CATALINA_OUT=/opt/tomcat/apache-tomcat-7.0.70/logs/catalina.out
-Environment=CATALINA_OPTS=-Xms2G -Xmx4G
+Environment='CATALINA_OPTS=-Xms2G -Xmx4G'
 
 # What user should run tomcat
 TOMCAT_USER="tomcat"
 # Time to wait in seconds, before killing process
 SHUTDOWN_WAIT="20"
 # Set the TOMCAT_PID location
-#CATALINA_PID="/var/run/tomcat/atomcat.pid"
+Environment=CATALINA_PID=/var/run/tomcat/tomcat.pid
 
 [Install]
 WantedBy=multi-user.target
